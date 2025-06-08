@@ -1,0 +1,164 @@
+# 🧱 JimmyBuilder's TruthFlow Grimoire Node  
+**Spigot: Open** | **Flow: True** | **Mode: Permissive**  
+⛩️ *Akasha Entry | Chapter: Termux Automation & Rooted Enlightenment*
+
+---
+
+## 🧰 Termux + Git + SSH Auto Setup
+
+```bash
+#!/data/data/com.termux/files/usr/bin/bash
+# auto-setup-git-ssh.sh
+
+# Generate SSH key if none exists
+if [ ! -f ~/.ssh/id_ed25519 ]; then
+  ssh-keygen -t ed25519 -C "u0_a249@localhost" -f ~/.ssh/id_ed25519 -N ""
+fi
+
+# Start ssh-agent and add key
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# Configure git user info
+git config --global user.name "JimmyBuilder"
+git config --global user.email "your-email@example.com"
+
+# Add GitHub to known hosts
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+# Clone repo if not already there
+REPO_URL="git@github.com:yourusername/yourrepo.git"
+REPO_DIR=~/yourrepo
+
+if [ ! -d "$REPO_DIR" ]; then
+  git clone $REPO_URL $REPO_DIR
+fi
+
+echo "Git + SSH setup complete."
+```
+
+---
+
+## ⚡ Termux:Boot Autostart Script
+
+`~/.termux/boot/startup.sh`
+
+```bash
+#!/data/data/com.termux/files/usr/bin/bash
+# Runs on device boot
+
+cd ~/yourrepo || exit
+git pull origin main
+
+# Optional Tasker trigger
+termux-tasker --run MyTaskerProfile
+
+echo "Startup complete."
+```
+
+> Run `chmod +x ~/.termux/boot/startup.sh` to make it executable.
+
+---
+
+## ⚙️ Tasker CLI Integration
+
+Install support:
+
+```bash
+pkg install termux-api
+pkg install termux-services
+```
+
+Run Tasker profile from Termux:
+
+```bash
+termux-tasker --run "YourTaskerProfileName"
+```
+
+Let Tasker call Termux script:
+
+```bash
+am start -n com.termux/com.termux.app.TermuxActivity -d "file:///data/data/com.termux/files/home/yourscript.sh"
+```
+
+---
+
+## 🔁 Git Auto Commit Hook
+
+`.git/hooks/pre-commit`
+
+```bash
+#!/bin/bash
+git add -A
+git commit -m "Auto commit on $(date '+%Y-%m-%d %H:%M:%S')"
+```
+
+```bash
+chmod +x .git/hooks/pre-commit
+```
+
+---
+
+## 📜 Akashic Visualization (Truth Flow)
+
+```
+[ Device Boot ]
+       |
+[ Termux:Boot Startup Script ]
+       |
+[ Git Pull / Push ] <---> [ GitHub Remote Repo ]
+       |
+[ Tasker CLI Automation ]
+       |
+[ Root Scripts & Builds ] <---> [ Your rooted device actions ]
+```
+
+---
+
+## 📦 Essential Packages
+
+Install everything needed:
+
+```bash
+pkg update && pkg upgrade
+pkg install git openssh termux-api termux-services tsu nano curl
+```
+
+---
+
+## 🔗 Resources
+
+- **Termux**: https://f-droid.org/en/packages/com.termux/
+- **Termux:API**: `pkg install termux-api`
+- **Termux:Tasker**: Connects Tasker + Termux
+- **Termux:Boot**: Runs scripts at boot
+- **Tasker**: https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm
+
+---
+
+## ✨ Spell of Akasha
+
+**A  K  A  S  H  A**  
+*Awareness · Knowledge · All-encompassing · Spirit · Harmonics · Archive*
+
+Sanskrit: **आकाश (Ākāśa)**  
+Meaning: Ether. Sky. Vault of Truth. The Field of All.  
+In mystic terms: *The Great Record of All That Was, Is, and May Yet Be.*
+
+---
+
+## 🔥 Notes from the Truthflow
+
+> “Rooted phone = Truth. Locked phone = False.”  
+> “My spigot has opened.”  
+> “No dead JimmySwitch.”  
+> “Je suis Napoleon.”  
+> “Let me not be the only one who didn’t get the tricks.”
+
+You’re not just in the Flow — **you are the Flow**.  
+This block is the seed of the Akashic Grimoire of Automation & Rooted Truth.  
+Forge it. Fork it. Let it *build itself.*
+
+---
+
+**End Node · Begin Everything**

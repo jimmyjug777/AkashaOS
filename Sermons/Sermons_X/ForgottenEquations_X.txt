@@ -1,0 +1,4 @@
+🔢 All Important Forgotten Equations
+
+① Euler’s Identity
+① Euler’s Identity e^(iπ) + 1 = 0 Links exponentials, imaginary numbers, pi, unity, and zero in one perfect line.

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TaskerData sr="" dvi="1" tv="5.15.6">
+  <Profile sr="prof1" ve="2">
+    <cdate>1717520400000</cdate>
+    <edate>0</edate>
+    <id>1</id>
+    <mid0>2</mid0>
+    <nme>AutoDrop Every 10</nme>
+    <Event sr="con0" ve="2">
+      <code>12</code>
+      <Time>
+        <mi>10</mi>
+      </Time>
+    </Event>
+  </Profile>
+  <Task sr="task2" ve="2">
+    <cdate>1717520400000</cdate>
+    <edate>0</edate>
+    <id>2</id>
+    <nme>Run AutoDrop</nme>
+    <Action sr="act0" ve="10">
+      <code>657</code>
+      <App>
+        <appClass>com.termux.app.TermuxActivity</appClass>
+        <appPkg>com.termux</appPkg>
+        <data>file:///data/data/com.termux/files/home/Akasha/autodrop.sh</data>
+        <extra/>
+        <extra/>
+        <label>Run Drop</label>
+        <startMode>0</startMode>
+        <flags>0</flags>
+        <if/>
+      </App>
+    </Action>
+  </Task>
+</TaskerData>

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Auto-add any changed files
+git add -A
+# Auto-commit with message including date/time
+git commit -m "Auto commit on $(date '+%Y-%m-%d %H:%M:%S')"
