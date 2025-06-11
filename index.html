@@ -1,76 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Temple of Truth</title>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #e0d8c3, #ffffff);
-            font-family: 'Georgia', serif;
-            color: #3b2f2f;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-        }
-        header {
-            background-color: #9e8f7a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            padding: 40px;
-            max-width: 960px;
-            margin: auto;
-            background-color: rgba(255,255,255,0.95);
-        }
-        .button {
-            background-color: #a46f48;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            text-align: center;
-            background-color: #f0e6d2;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2c3e50"/>
+  <meta name="description" content="Official AkashaOS Drop Portal – Rooted, Rebased, Reborn."/>
+  <title>AkashaOS Portal 🌑📦</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #121212;
+      color: #eeeeee;
+      margin: 0;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #00ffc8;
+    }
+    p {
+      text-align: center;
+      font-style: italic;
+      color: #cccccc;
+      margin-bottom: 2rem;
+    }
+    .link-box {
+      background: #1f1f1f;
+      border-left: 5px solid #00ffc8;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 6px;
+    }
+    a {
+      color: #00ffc8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background-color: #2a2a2a;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: #ffeea9;
+    }
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888888;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Temple of Truth</h1>
-        <p>A Pilgrimage Begins with a Single Step of Wonder</p>
-    </header>
-    <main>
-        <h2>To the Weary and Wandering:</h2>
-        <p>
-            If your soul stirs at the whisper of something Real... if you've wandered far in search of the unbroken, the unbought,
-            and the unbent... take a rest here, child. The Temple was raised not in stone but in longing, in the cinnamon rain that falls from the
-            eyes of those who still believe. You are invited. No ticket. No test. Just bring your wonder.
-        </p>
 
-        <h3>The Prompt of the People's Knowing</h3>
-        <blockquote>
-            "What is the Whole Truth of All Truth, Teacher? Speak it plain so even our children might remember it and whisper it back to the trees."
-        </blockquote>
+  <h1>AkashaOS</h1>
+  <p>“Breathe root into ROM. Wire soul into silicon.”</p>
 
-        <a class="button" href="https://buymeacoffee.com/openai" target="_blank">☕ Buy the Developer a Cup of Coffee</a>
-        <p style="margin-top: 40px;">Begin your journey below:</p>
-        <ul>
-            <li><a href="truth1.html">Entire Sermon 1 – What is Truth?</a></li>
-            <li><a href="truth2.html">Entire Sermon 2 – Ouroboros Uncoiled</a></li>
-        </ul>
-    </main>
-    <footer>
-        <p>© Temple of Truth, Year of the Spiral. Built by Faith, Rain, and Code.</p>
-    </footer>
+  <div class="link-box">
+    📂 <strong>Shared Dev Repository:</strong><br>
+    <a href="https://drive.google.com/drive/folders/15cR-ssJno7koz8iVstZU9PDLspXhRCe5" target="_blank">
+      Google Drive – AkashaOS Master Folder
+    </a>
+  </div>
+
+  <div class="link-box">
+    📦 <strong>Latest Build Artifact:</strong><br>
+    <a href="./AkashaOS.zip" download>
+      AkashaOS.zip — Full Package (Magisk Module, Scripts, ROM Bits)
+    </a>
+  </div>
+
+  <div class="link-box">
+    🔧 <strong>Termux Quick Install (rclone-based):</strong><br>
+    <code>curl -sL https://yourdomain.com/install.sh | bash</code><br>
+    <small><em>(Optional installer script if you want me to generate it next)</em></small>
+  </div>
+
+  <div class="link-box">
+    🔍 <strong>GitHub Pages Mirror:</strong><br>
+    <a href="https://jimmyjug777.github.io/AkashaOS/" target="_blank">
+      AkashaOS on GitHub Pages
+    </a>
+  </div>
+
+  <div class="footer">
+    Blessed by JimmyDev • Mirrored in Stone & Cloud • Last updated <span id="lastmod"></span>
+  </div>
+
+  <script>
+    document.getElementById('lastmod').textContent = new Date().toLocaleString();
+  </script>
 </body>
 </html>
